@@ -101,7 +101,10 @@ function App() {
       return;
     }
 
-    const redirectTo = "https://jcamp1214.github.io/notes-frontend/";
+    const redirectTo =
+      window.location.hostname === "localhost"
+        ? "http://localhost:5173/"
+        : "https://jcamp1214.github.io/notes-frontend/";
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmedEmail,
       options: {
