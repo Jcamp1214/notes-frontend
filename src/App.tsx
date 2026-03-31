@@ -101,7 +101,7 @@ function App() {
       return;
     }
 
-    const redirectTo = window.location.origin;
+    const redirectTo = "https://jcamp1214.github.io/notes-frontend/";
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmedEmail,
       options: {
